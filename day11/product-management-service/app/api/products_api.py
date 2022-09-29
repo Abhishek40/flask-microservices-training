@@ -38,12 +38,12 @@ restful_api.add_resource(ProductsApi, '/api/products')
 
 def before_first_request():
     print("before_first_request")
-    initial_demo_product = Product.from_json({
+    product1 = Product.from_json({
         'name': 'Book1',
         'description': 'Book to be read',
         'price': 20,
         'currency': '₹',
         'stock': 20,
         'active': True
-    })
-create_demo_product(db, initial_demo_product)
+        })  
+    create_demo_product(db, product1)
