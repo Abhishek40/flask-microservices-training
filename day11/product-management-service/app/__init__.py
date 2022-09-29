@@ -12,11 +12,8 @@ class CustomApi(Api):
     def handle_error(self, e):
         return {'code': e.code, 'message': 'error', 'errors': e.message}, e.code
 restful_api = CustomApi(app)
-
-#flask_bcrypt = Bcrypt(app)
-#jwt = JWTManager(app)
 db = SQLAlchemy(app)  
 
 
 ## Imports are essential for python interpreter to find the model files for migration
-from .models import user, address
+from .models import product
