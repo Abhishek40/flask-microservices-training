@@ -16,7 +16,7 @@ class AddressApi(Resource):
 		return [address.to_json() for address in user_address]
 
 	def put(self, user_id):
-		Address.query,filter_by(user_id=user_id)
+		Address.query.filter_by(user_id=user_id)
 		new_address = Address.from_json(request.json)
 		new_address.user_id = user_id
 		db.session.add(new_address)
