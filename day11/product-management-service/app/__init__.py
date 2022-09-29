@@ -1,8 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
-#from flask_jwt_extended import JWTManager
-#from flask_bcrypt import Bcrypt
 from .config import load_configuration
 
 app = Flask(__name__)
